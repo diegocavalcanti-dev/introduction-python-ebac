@@ -37,28 +37,26 @@
 # Roda mundo, roda-gigante
 # Roda moinho, roda pião
 
-class ArquivoTexto(object):
+import sys
+
+class ArquivoTexto:
     def __init__(self, arquivo: str):
         self.arquivo = arquivo
         self.conteudo = self.extrair_conteudo()
+
     def extrair_conteudo(self):
-        conteudo = []
-        try:
-            with open(self.arquivo, "r", encoding="utf8") as arquivo:
-                conteudo = arquivo.readlines()
-        except FileNotFoundError:
-            print(f"O arquivo {self.arquivo} não foi encontrado.")
+        """Lê o conteúdo do arquivo, preservando quebras de linha e linhas vazias."""
+        conteudo = None
+        with open(f"{sys.path[0]}/{self.arquivo}", "r", encoding="utf-8") as arquivo:
+            conteudo = arquivo.readlines()  # Lê o arquivo sem modificar as quebras de linha
         return conteudo
 
     def extrair_linha(self, numero_linha: int):
+        """Retorna a linha desejada, considerando a primeira linha como número 1."""
         if 1 <= numero_linha <= len(self.conteudo):
-            return self.conteudo[numero_linha - 1].strip()
+            return self.conteudo[numero_linha - 1].strip()  # Remove espaços apenas da linha específica
         else:
             return f"Linha {numero_linha} não existe no arquivo."
-
-musica = ArquivoTexto("musica.txt")
-print(musica.conteudo)
-print(musica.extrair_linha(2))
 
 
 
@@ -69,6 +67,7 @@ print(musica.extrair_linha(2))
 # self.extrair_nome_colunas: Método que retorna o nome das colunas do arquivo.
 # extrair_coluna: Método que recebe como parâmetro o indice da coluna e retorna o valor em questão. Considere a primeira coluna como número 1.
 # Veja abaixo a estrutura do arquivo csv:
+
 # id,valor_venda,valor_manutencao,portas,pessoas,porta_malas
 # 1,vhigh,med,2,2,small
 # 2,med,vhigh,2,2,small
