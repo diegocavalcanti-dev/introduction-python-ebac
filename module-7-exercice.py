@@ -11,6 +11,7 @@
 # !pip install wget==3.2
 # 2ª Parte:
 
+
 # Fazendo o download dos dados no arquivo compactado dados.zip.
 
 # import wget
