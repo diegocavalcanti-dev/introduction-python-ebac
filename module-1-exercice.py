@@ -85,7 +85,7 @@ print(f"Selic: {selic}")
 print(f"Ano: {ano}")
 
 
-# -----------------------------------
+# ----------------------------------------------
 # 1.5
 # Booleans
 # Utilize a tabela da verdade para responder: qual o valor da variável x?
