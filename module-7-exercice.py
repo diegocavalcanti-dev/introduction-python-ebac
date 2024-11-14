@@ -5,7 +5,6 @@
 # Vamos utilizar o pacote wget para fazer o download dos dados.
 
 # 1ª Parte:
-
 # Instalando o pacote wget na versão 3.2.
 
 # !pip install wget==3.2
