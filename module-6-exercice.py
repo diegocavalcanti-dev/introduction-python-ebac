@@ -58,7 +58,6 @@ class ArquivoTexto:
         else:
             return f"Linha {numero_linha} não existe no arquivo."
 
-
 # 6.2 Classe para ler arquivos de csv
 # Crie a classe `ArquivoCSV`. Ela deve extender (herdar) a classe ArquivoTexto para reaproveitar os seus atributos (self.arquivo e self.conteudo). Além disso, adicione o seguinte atributo:
 # self.colunas: Atributo do tipo `list` onde os elementos são os nome das colunas;
