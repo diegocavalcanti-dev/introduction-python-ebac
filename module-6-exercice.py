@@ -65,7 +65,6 @@ class ArquivoTexto:
 # self.extrair_nome_colunas: Método que retorna o nome das colunas do arquivo.
 # extrair_coluna: Método que recebe como parâmetro o indice da coluna e retorna o valor em questão. Considere a primeira coluna como número 1.
 # Veja abaixo a estrutura do arquivo csv:
-
 # id,valor_venda,valor_manutencao,portas,pessoas,porta_malas
 # 1,vhigh,med,2,2,small
 # 2,med,vhigh,2,2,small
